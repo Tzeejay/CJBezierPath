@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2370B8711B3427FD00F3099C /* Reveal.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2370B8701B3427FD00F3099C /* Reveal.framework */; };
 		23C273361B277CD700EC9C7E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 23C273351B277CD700EC9C7E /* main.m */; };
 		23C273391B277CD700EC9C7E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 23C273381B277CD700EC9C7E /* AppDelegate.m */; };
 		23C2733C1B277CD700EC9C7E /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 23C2733B1B277CD700EC9C7E /* ViewController.m */; };
@@ -14,6 +15,7 @@
 		23C273411B277CD700EC9C7E /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 23C273401B277CD700EC9C7E /* Images.xcassets */; };
 		23C273441B277CD700EC9C7E /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 23C273421B277CD700EC9C7E /* LaunchScreen.xib */; };
 		23C273501B277CD700EC9C7E /* CJBezierPathTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 23C2734F1B277CD700EC9C7E /* CJBezierPathTests.m */; };
+		23C2735B1B277CFB00EC9C7E /* CJRingBezierView.m in Sources */ = {isa = PBXBuildFile; fileRef = 23C2735A1B277CFB00EC9C7E /* CJRingBezierView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -27,6 +29,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2370B8701B3427FD00F3099C /* Reveal.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Reveal.framework; sourceTree = "<group>"; };
 		23C273301B277CD700EC9C7E /* CJBezierPath.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CJBezierPath.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		23C273341B277CD700EC9C7E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		23C273351B277CD700EC9C7E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -40,6 +43,8 @@
 		23C273491B277CD700EC9C7E /* CJBezierPathTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CJBezierPathTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		23C2734E1B277CD700EC9C7E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		23C2734F1B277CD700EC9C7E /* CJBezierPathTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CJBezierPathTests.m; sourceTree = "<group>"; };
+		23C273591B277CFB00EC9C7E /* CJRingBezierView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CJRingBezierView.h; path = ../CJRingBezierView.h; sourceTree = "<group>"; };
+		23C2735A1B277CFB00EC9C7E /* CJRingBezierView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CJRingBezierView.m; path = ../CJRingBezierView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,6 +52,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2370B8711B3427FD00F3099C /* Reveal.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -81,8 +87,11 @@
 		23C273321B277CD700EC9C7E /* CJBezierPath */ = {
 			isa = PBXGroup;
 			children = (
+				2370B8701B3427FD00F3099C /* Reveal.framework */,
 				23C273371B277CD700EC9C7E /* AppDelegate.h */,
 				23C273381B277CD700EC9C7E /* AppDelegate.m */,
+				23C273591B277CFB00EC9C7E /* CJRingBezierView.h */,
+				23C2735A1B277CFB00EC9C7E /* CJRingBezierView.m */,
 				23C2733A1B277CD700EC9C7E /* ViewController.h */,
 				23C2733B1B277CD700EC9C7E /* ViewController.m */,
 				23C2733D1B277CD700EC9C7E /* Main.storyboard */,
@@ -221,6 +230,7 @@
 			files = (
 				23C2733C1B277CD700EC9C7E /* ViewController.m in Sources */,
 				23C273391B277CD700EC9C7E /* AppDelegate.m in Sources */,
+				23C2735B1B277CFB00EC9C7E /* CJRingBezierView.m in Sources */,
 				23C273361B277CD700EC9C7E /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -347,8 +357,18 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/CJBezierPath",
+				);
 				INFOPLIST_FILE = CJBezierPath/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_LDFLAGS = (
+					"-ObjC",
+					"-lz",
+					"-framework",
+					Reveal,
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -357,8 +377,18 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/CJBezierPath",
+				);
 				INFOPLIST_FILE = CJBezierPath/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_LDFLAGS = (
+					"-ObjC",
+					"-lz",
+					"-framework",
+					Reveal,
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
@@ -416,6 +446,7 @@
 				23C273551B277CD700EC9C7E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		23C273561B277CD700EC9C7E /* Build configuration list for PBXNativeTarget "CJBezierPathTests" */ = {
 			isa = XCConfigurationList;
@@ -424,6 +455,7 @@
 				23C273581B277CD700EC9C7E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
